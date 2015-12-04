@@ -1535,7 +1535,7 @@
           "nextLinkName": "nextlink"
         }
       }
-    },	
+    },
 	  "/providers/Microsoft.Intune/locations/{hostName}/flaggedUsers/{userName}": {
       "get": {
         "description": "Returns Intune flagged user details",
@@ -1582,7 +1582,7 @@
           }
         }
       }
-    },    	
+    },
 	  "/providers/Microsoft.Intune/locations/{hostName}/flaggedUsers/{userName}/flaggedEnrolledApps": {
       "get": {
         "description": "Returns Intune flagged enrolled app collection for the User",
@@ -1646,7 +1646,7 @@
           "nextLinkName": "nextlink"
         }
       }
-    }	
+    }
   },
   "definitions": {
     "Resource": {
@@ -1913,7 +1913,6 @@
         },
         "appSharingFromLevel": {
           "type": "string",
-          "default": "none",
           "enum": [
             "none",
             "policyManagedApps",
@@ -1922,7 +1921,6 @@
         },
         "appSharingToLevel": {
           "type": "string",
-          "default": "none",
           "enum": [
             "none",
             "policyManagedApps",
@@ -1931,7 +1929,6 @@
         },
         "authentication": {
           "type": "string",
-          "default": "required",
           "enum": [
             "required",
             "notRequired"
@@ -1939,7 +1936,6 @@
         },
         "clipboardSharingLevel": {
           "type": "string",
-          "default": "blocked",
           "enum": [
             "blocked",
             "policyManagedApps",
@@ -1949,7 +1945,6 @@
         },
         "dataBackup": {
           "type": "string",
-          "default": "allow",
           "enum": [
             "allow",
             "block"
@@ -1957,7 +1952,6 @@
         },
         "fileSharingSaveAs": {
           "type": "string",
-          "default": "allow",
           "enum": [
             "allow",
             "block"
@@ -1965,7 +1959,6 @@
         },
         "pin": {
           "type": "string",
-          "default": "required",
           "enum": [
             "required",
             "notRequired"
@@ -1976,7 +1969,6 @@
         },
         "deviceCompliance": {
           "type": "string",
-          "default": "enable",
           "enum": [
             "enable",
             "disable"
@@ -1984,7 +1976,6 @@
         },
         "managedBrowser": {
           "type": "string",
-          "default": "required",
           "enum": [
             "required",
             "notRequired"
@@ -2010,7 +2001,6 @@
         "groupStatus": {
           "readOnly": true,
           "type": "string",
-          "default": "notTargeted",
           "enum": [
             "notTargeted",
             "targeted"
@@ -2033,7 +2023,6 @@
       "properties": {
         "fileEncryptionLevel": {
           "type": "string",
-          "default": "deviceLocked",
           "enum": [
             "deviceLocked",
             "deviceLockedExceptFilesOpen",
@@ -2043,7 +2032,6 @@
         },
         "touchId": {
           "type": "string",
-          "default": "enable",
           "enum": [
             "enable",
             "disable"
@@ -2061,7 +2049,6 @@
       "properties": {
         "screenCapture": {
           "type": "string",
-          "default": "allow",
           "enum": [
             "allow",
             "block"
@@ -2069,7 +2056,6 @@
         },
         "fileEncryption": {
           "type": "string",
-          "default": "required",
           "enum": [
             "required",
             "notRequired"
@@ -2240,7 +2226,7 @@
       ],
       "description": "Default Statuses entity for the given tenant."
     },
-    "StatusesProperties": {      
+    "StatusesProperties": {
       "properties": {
         "deployedPolicies": {
           "type": "integer",
@@ -2278,9 +2264,9 @@
         "wipeSucceededApps": {
           "type": "integer",
 		      "readOnly": true
-        }				
+        }
    	  }
-    },	
+    },
 		"FlaggedUserCollection": {
 		"required":["value"],
 		"properties":{
@@ -2297,12 +2283,12 @@
       }
 		},
      "description": "Flagged user collection for the given tenant."
-	  },	
+	  },
 	  "FlaggedUser":{
 		  "properties":{
 			  "properties":{
 				  "$ref":"#/definitions/FlaggedUserProperties"
-			  }	
+			  }
 		  },
 		  "allOf": [
           {
@@ -2331,7 +2317,7 @@
           "items": {
             "$ref": "#/definitions/FlaggedEnrolledApp"
           }
-        },       
+        },
         "nextlink": {
           "readOnly": true,
           "type": "string",
@@ -2339,12 +2325,12 @@
         }
       },
       "description": "Flagged Enrolled App collection for the given tenant."
-	},	
+	},
 	  "FlaggedEnrolledApp":{
 		  "properties":{
 			  "properties":{
 				  "$ref":"#/definitions/FlaggedEnrolledAppProperties"
-			  }	
+			  }
 		  },
 		  "allOf": [
           {
